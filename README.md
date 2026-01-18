@@ -10,7 +10,7 @@ failure recovery, and repeatable workflows.
 - Self-training and practice environments
 
 ## How to Start
-Read `00-ubuntu训练计划.md` 
+Read `0-foundation/00-ubuntu训练计划.md` 
 
 ## Structure
 - 1-docs: methodology and concepts
