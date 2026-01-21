@@ -36,7 +36,9 @@
 使用 HTTP 访问（不涉及 TLS）
 
 ### 4.3 应用变更
+```
 sudo staging-compose-up
+```
 ## 5. Staging 验证
 验证方式
 访问 http://localhost:8080
@@ -57,7 +59,9 @@ sudo staging-compose-up
 不在 Prod 中重新设计或试验
 
 应用命令
+```
 sudo docker compose restart nginx
+```
 ## 7. Prod 验证
 访问生产域名
 
@@ -68,8 +72,10 @@ sudo docker compose restart nginx
 ## 8. 回滚方案
 如出现异常：
 
+```
 git checkout nginx/conf.d/*.conf
 sudo docker compose restart nginx
+```
 ## 9. 结论
 变更路径已验证
 
