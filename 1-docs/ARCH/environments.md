@@ -113,6 +113,7 @@ Staging 相对于 Prod，仅允许以下差异：
 
 结构：
 
+```
 /home/ratio/mattermost/environments/
   prod/
     docker-compose.yml (immutable)
@@ -124,8 +125,10 @@ Staging 相对于 Prod，仅允许以下差异：
     nginx/
     data/db-staging
     data/mm-staging
+```
 
 ### Compose Project Isolation
 
 - prod: name=mm-prod
 - staging: name=mm-staging
+
