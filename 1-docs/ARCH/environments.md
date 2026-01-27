@@ -103,3 +103,29 @@ Staging 相对于 Prod，仅允许以下差异：
 架构版本：v1.0
 
 状态：已实施
+
+## v2.0 自动化目标态（已实施）
+
+### Prod/Staging 完全隔离
+
+- nginx 配置随 environments 拆分
+- 数据目录严格独立
+
+结构：
+
+/home/ratio/mattermost/environments/
+  prod/
+    docker-compose.yml (immutable)
+    nginx/
+    data/db
+    data/mm
+  staging/
+    docker-compose.yml
+    nginx/
+    data/db-staging
+    data/mm-staging
+
+### Compose Project Isolation
+
+- prod: name=mm-prod
+- staging: name=mm-staging

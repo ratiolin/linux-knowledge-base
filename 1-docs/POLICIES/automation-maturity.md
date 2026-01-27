@@ -1,5 +1,22 @@
 # 自动化成熟度路线（Automation Maturity）
 
+## 发布治理
+
+- Prod 不允许直接编辑配置（immutable）
+- 唯一入口：scripts/promote-prod.sh
+- Promote 前必须存在 change-record
+
+## 自动化运行
+
+- daily-inspection.sh 每日输出到 /var/log/inspections/
+- backup.sh 每日生成 /data/backups/YYYY-MM-DD/
+- SHA256SUMS 必须存在
+
+## 权限边界
+
+- ops 仅可执行 sudoers 白名单命令
+- governance 权限独立（visudo/reload sshd）
+
 ## 阶段一：把“训练方案”变成“可执行判定树”
 
 **目标：不写自动化，只写“if / else 思维”**
